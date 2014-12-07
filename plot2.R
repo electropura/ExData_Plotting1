@@ -2,7 +2,7 @@
 
 data <- read.csv2("household_power_consumption.txt", header=TRUE)
 
-# Change date and time format to posix
+# Change date and time format to posix and select dates of interest
 
 data$DateTime <- paste(data$Date, data$Time)
 data$DateTimePosix <- strptime(data$DateTime, "%d/%m/%Y %H:%M:%S")
